@@ -22,5 +22,8 @@ class CustomerCreationController {
         return ResponseEntity.status(HttpStatus.CREATED).body(customerCreationService.createNewCustomer(newCustomer));
     }
 
+    @PostMapping("add-address/${customerId}")
+    public ResponseEntity<Address> addNewAddress()
+
 
 }

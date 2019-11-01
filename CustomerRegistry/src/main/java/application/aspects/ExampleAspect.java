@@ -24,8 +24,8 @@ public class ExampleAspect {
     @Around("@annotation(application.annotation.SaveRequestInDatabase)")
     public Object saveRequestInDatabase(ProceedingJoinPoint joinPoint) throws Throwable {
 
-        MethodSignature signature2 = (MethodSignature) joinPoint.getSignature();
-        Method method = signature2.getMethod();
+        MethodSignature sign = (MethodSignature) joinPoint.getSignature();
+        Method method = sign.getMethod();
         SaveRequestInDatabase myAnnotation = method.getAnnotation(SaveRequestInDatabase.class);
         RequestTypeEnum requestType  = myAnnotation.requestType();
 

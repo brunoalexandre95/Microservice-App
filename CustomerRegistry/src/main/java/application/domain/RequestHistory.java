@@ -25,4 +25,7 @@ public class RequestHistory {
 
     private long requestTime;
 
+    @ManyToOne
+    Customer customer;
+
 }
