@@ -1,6 +1,0 @@
-application/controller/UserHandlerController.class
-application/service/UserManipulationService.class
-application/domain/User.class
-application/repository/UserRepository.class
-application/service/UserManipulationServiceImpl.class
-application/UserHandlerApplication.class
