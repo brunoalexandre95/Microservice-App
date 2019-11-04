@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dc423c2c-e87e-481a-8be2-1957983aad01" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Combat/src/main/java/application/controller/TournamentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Combat/src/main/java/application/domain/Tournament.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Combat/src/main/java/application/domain/TournamentFighter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Combat/src/main/java/application/dto/PlayerDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Combat/src/main/java/application/event/tournament_join/TournamentFighterJoinEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Combat/src/main/java/application/repository/TournamentFighterRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Combat/src/main/java/application/repository/TournamentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Combat/src/main/java/application/service/TournamentFighterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Combat/src/main/java/application/service/TournamentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/configuration/rabbitMQ/RabbitMQDispatcherConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/configuration/rabbitMQ/RabbitMQDispatcherExchangeConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/configuration/rabbitMQ/RabbitMQHandlerConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/configuration/rabbitMQ/RabbitMQHandlerQueueConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/controller/FightController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/dto/FighterDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/dto/FighterDTOMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/event/dispatch/FighterJoinEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/event/dispatch/FighterJoinEventDispatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/event/handle/CombatEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/event/handle/CombatEventHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/service/FightTournamentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__com_h2database_h2_1_4_196.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__com_rabbitmq_amqp_client_4_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__com_rabbitmq_http_client_1_1_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_5_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_5_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_assertj_assertj_core_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_hibernate_hibernate_core_5_0_12_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_0_12_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_5_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_javassist_javassist_3_21_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_jboss_jandex_2_0_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_projectlombok_lombok_1_16_18.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_1_7_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_1_7_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_13_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_11_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_spring_aop_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_spring_beans_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_spring_context_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_spring_core_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_spring_expression_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_spring_messaging_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_spring_orm_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_spring_test_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_spring_tx_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_spring_web_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/src/main/java/application/AnalyticsApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/src/main/java/application/configuration/RabbitMQConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/src/main/java/application/domain/ActionTypeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/src/main/java/application/domain/CustomerTrack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/src/main/java/application/event/CustomerRegisteredEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/src/main/java/application/event/EventHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/application/AnalyticsApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/application/configuration/RabbitMQConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/application/domain/ActionTypeEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/application/domain/CustomerTrack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/application/event/CustomerRegisteredEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/application/event/EventHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/microservices/book/SocialMultiplicationApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/microservices/book/multiplication/configuration/RabbitMQConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/microservices/book/multiplication/controller/MultiplicationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/microservices/book/multiplication/controller/MultiplicationResultAttemptController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/microservices/book/multiplication/domain/Multiplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/microservices/book/multiplication/domain/MultiplicationResultAttempt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/microservices/book/multiplication/domain/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/microservices/book/multiplication/event/EventDispatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/microservices/book/multiplication/event/MultiplicationSolvedEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/microservices/book/multiplication/repository/MultiplicationRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/microservices/book/multiplication/repository/MultiplicationResultAttemptRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/microservices/book/multiplication/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/microservices/book/multiplication/service/MultiplicationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/microservices/book/multiplication/service/MultiplicationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/microservices/book/multiplication/service/RandomGeneratorService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/classes/microservices/book/multiplication/service/RandomGeneratorServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/test-classes/microservices/book/multiplication/controller/MultiplicationControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/test-classes/microservices/book/multiplication/controller/MultiplicationResultAttemptControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/test-classes/microservices/book/multiplication/service/MultiplicationServiceImplTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analytics/target/test-classes/microservices/book/multiplication/service/RandomGeneratorServiceImplTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__com_h2database_h2_1_4_196.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__com_rabbitmq_amqp_client_4_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__com_rabbitmq_http_client_1_1_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_5_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_5_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_assertj_assertj_core_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_hibernate_hibernate_core_5_0_12_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_0_12_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_5_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_javassist_javassist_3_21_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_jboss_jandex_2_0_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_projectlombok_lombok_1_16_18.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_1_7_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_1_7_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_5_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_13_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_11_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_spring_aop_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_spring_beans_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_spring_context_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_spring_core_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_spring_expression_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_spring_messaging_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_spring_orm_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_spring_test_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_spring_tx_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_spring_web_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/src/main/java/application/PlayerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/FighterApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/src/main/java/application/controller/PlayerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/src/main/java/application/domain/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/domain/Fighter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/src/main/java/application/domain/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/domain/Stats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/src/main/java/application/enumerate/SexEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/enumerate/SexEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/src/main/java/application/repository/PlayerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/repository/FighterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/src/main/java/application/repository/StatsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/repository/StatsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/src/main/java/application/service/PlayerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/application/AnalyticsApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/application/PlayerApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/application/configuration/RabbitMQConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/application/controller/PlayerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/application/domain/ActionTypeEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/application/domain/CustomerTrack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/application/domain/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/application/domain/Stats.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/application/enumerate/SexEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/application/event/CustomerRegisteredEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/application/event/EventHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/application/repository/PlayerRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/application/repository/StatsRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/application/service/PlayerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/microservices/book/SocialMultiplicationApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/microservices/book/multiplication/configuration/RabbitMQConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/microservices/book/multiplication/controller/MultiplicationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/microservices/book/multiplication/controller/MultiplicationResultAttemptController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/microservices/book/multiplication/domain/Multiplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/microservices/book/multiplication/domain/MultiplicationResultAttempt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/microservices/book/multiplication/domain/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/microservices/book/multiplication/event/EventDispatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/microservices/book/multiplication/event/MultiplicationSolvedEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/microservices/book/multiplication/repository/MultiplicationRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/microservices/book/multiplication/repository/MultiplicationResultAttemptRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/microservices/book/multiplication/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/microservices/book/multiplication/service/MultiplicationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/microservices/book/multiplication/service/MultiplicationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/microservices/book/multiplication/service/RandomGeneratorService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/classes/microservices/book/multiplication/service/RandomGeneratorServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/test-classes/microservices/book/multiplication/controller/MultiplicationControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/test-classes/microservices/book/multiplication/controller/MultiplicationResultAttemptControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/test-classes/microservices/book/multiplication/service/MultiplicationServiceImplTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combat Simulation/target/test-classes/microservices/book/multiplication/service/RandomGeneratorServiceImplTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/java/application/CustomerRegistryApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/java/application/annotation/SaveRequestInDatabase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/java/application/aspects/ExampleAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/java/application/configuration/RabbitMQConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/java/application/configuration/RestClientConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/java/application/controller/CustomerCreationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/java/application/controller/CustomerInfoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/java/application/domain/Address.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/java/application/domain/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/java/application/domain/RequestHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/java/application/enumerate/RequestTypeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/java/application/event/CustomerRegisteredEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/java/application/event/EventDispatcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/java/application/repository/CustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/java/application/repository/RequestHistoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/java/application/service/CustomerCreationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/java/application/service/CustomerCreationServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/resources/static/customer-registry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/resources/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/src/main/resources/static/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/META-INF/CustomerRegistry.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/META-INF/gamification-v5.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/application/CustomerRegistryApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/application/annotation/SaveRequestInDatabase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/application/aspects/ExampleAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/application/configuration/RabbitMQConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/application/configuration/RestClientConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/application/controller/CustomerCreationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/application/controller/CustomerInfoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/application/domain/Address.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/application/domain/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/application/domain/RequestHistory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/application/enumerate/RequestTypeEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/application/event/CustomerRegisteredEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/application/event/EventDispatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/application/repository/CustomerRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/application/repository/RequestHistoryRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/application/service/CustomerCreationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/application/service/CustomerCreationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/static/customer-registry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/classes/static/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistry/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__com_h2database_h2_1_4_196.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__com_h2database_h2_1_4_196.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__com_rabbitmq_amqp_client_4_0_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__com_rabbitmq_amqp_client_4_0_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__com_rabbitmq_http_client_1_1_1_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__com_rabbitmq_http_client_1_1_1_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_20.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_20.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_20.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_20.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_20.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_20.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_5_20.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_5_20.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_5_20.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_5_20.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_assertj_assertj_core_2_6_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_assertj_assertj_core_2_6_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_hibernate_hibernate_core_5_0_12_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_hibernate_hibernate_core_5_0_12_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_0_12_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_0_12_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_5_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_5_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_javassist_javassist_3_21_0_GA.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_javassist_javassist_3_21_0_GA.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_jboss_jandex_2_0_0_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_jboss_jandex_2_0_0_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_1_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_1_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_projectlombok_lombok_1_16_18.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_projectlombok_lombok_1_16_18.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_4_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_1_7_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_1_7_4_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_1_7_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_1_7_4_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_1_5_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_1_5_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_5_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_5_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_1_5_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_1_5_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_5_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_5_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_5_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_5_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_5_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_5_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_5_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_5_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_13_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_13_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_11_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_11_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_1_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_1_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_spring_aop_4_3_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_spring_aop_4_3_11_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_11_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_spring_beans_4_3_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_spring_beans_4_3_11_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_spring_context_4_3_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_spring_context_4_3_11_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_spring_core_4_3_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_spring_core_4_3_11_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_spring_expression_4_3_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_spring_expression_4_3_11_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_11_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_spring_messaging_4_3_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_spring_messaging_4_3_11_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_spring_orm_4_3_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_spring_orm_4_3_11_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_spring_test_4_3_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_spring_test_4_3_11_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_spring_tx_4_3_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_spring_tx_4_3_11_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_spring_web_4_3_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_spring_web_4_3_11_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_11_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/src/main/java/application/PlayerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/src/main/java/application/controller/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/controller/FighterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/src/main/java/application/domain/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/src/main/java/application/domain/Stats.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/src/main/java/application/enumerate/SexEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/src/main/java/application/repository/PlayerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/src/main/java/application/repository/StatsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/src/main/java/application/service/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/src/main/java/application/service/FighterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/application/AnalyticsApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/application/PlayerApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/application/configuration/RabbitMQConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/application/controller/PlayerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/application/domain/ActionTypeEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/application/domain/CustomerTrack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/application/domain/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/application/domain/Stats.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/application/enumerate/SexEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/application/event/CustomerRegisteredEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/application/event/EventHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/application/repository/PlayerRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/application/repository/StatsRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/application/service/PlayerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/microservices/book/SocialMultiplicationApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/microservices/book/multiplication/configuration/RabbitMQConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/microservices/book/multiplication/controller/MultiplicationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/microservices/book/multiplication/controller/MultiplicationResultAttemptController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/microservices/book/multiplication/domain/Multiplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/microservices/book/multiplication/domain/MultiplicationResultAttempt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/microservices/book/multiplication/domain/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/microservices/book/multiplication/event/EventDispatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/microservices/book/multiplication/event/MultiplicationSolvedEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/microservices/book/multiplication/repository/MultiplicationRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/microservices/book/multiplication/repository/MultiplicationResultAttemptRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/microservices/book/multiplication/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/microservices/book/multiplication/service/MultiplicationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/microservices/book/multiplication/service/MultiplicationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/microservices/book/multiplication/service/RandomGeneratorService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/classes/microservices/book/multiplication/service/RandomGeneratorServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Fighter/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/test-classes/microservices/book/multiplication/controller/MultiplicationControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/test-classes/microservices/book/multiplication/controller/MultiplicationResultAttemptControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/test-classes/microservices/book/multiplication/service/MultiplicationServiceImplTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/test-classes/microservices/book/multiplication/service/RandomGeneratorServiceImplTest.class" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="hideWarnings" value="true" />
+    <option name="HIDE_WARNINGS" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="createModuleGroups" value="true" />
+        <option name="importAutomatically" value="true" />
+        <option name="lookForNested" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1T2SZHeigVVYDsGlQfLiEQHQ5n7" />
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Microservice-App" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="application.repository" />
+      <recent name="application.configuration" />
+      <recent name="application.event" />
+      <recent name="application.dto" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Player/src/main/java/application/event/dispatch" />
+      <recent name="$PROJECT_DIR$/Combat/src/main/java/application/event" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.FighterApplication">
+    <configuration name="CombatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Combat-App" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="application.CombatApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FighterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Fighter-App" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="application.FighterApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.CombatApplication" />
+      <item itemvalue="Spring Boot.FighterApplication" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc423c2c-e87e-481a-8be2-1957983aad01" name="Default Changelist" comment="" />
+      <created>1572656750872</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572656750872</updated>
+      <workItem from="1572656752344" duration="14485000" />
+      <workItem from="1572743989198" duration="69000" />
+      <workItem from="1572827430647" duration="418000" />
+      <workItem from="1572829289870" duration="508000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Player" />
+        <module name="social-multiplication-v5" />
+        <module name="Combat-Simulation-App" />
+        <module name="Player-App" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Combat Simulation" target="1.8" />
+      <module name="Combat-Simulation-App" target="1.8" />
+      <module name="Player" target="1.8" />
+      <module name="Player-App" target="1.8" />
+      <module name="social-multiplication-v5" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
