@@ -1,0 +1,17 @@
+server:
+  port: 8000
+
+zuul:
+  prefix: /api
+  routes:
+    fighter:
+      path: /fighter/join/**
+      url: http://localhost:8001/api/fighter/joinTournament
+
+endpoints:
+  trace:
+    sensitive: false
+
+ribbon:
+  eureka:
+    enabled: false

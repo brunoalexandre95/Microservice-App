@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FighterApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PlayerApplication.class, args);
+		SpringApplication.run(FighterApplication.class, args);
 	}
 
 }

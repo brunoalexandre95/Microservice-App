@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Analytics" />
-        <module name="CustomerRegistry" />
-        <module name="Player" />
+        <module name="Combat-App" />
+        <module name="Gateway-App" />
+        <module name="Fighter-App" />
       </profile>
     </annotationProcessing>
   </component>

@@ -1,4 +1,4 @@
-package application.configuration;
+package application.configuration.rabbitMQ;
 
 import org.springframework.amqp.core.TopicExchange;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
@@ -9,12 +9,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class RabbitMQConfiguration {
+public class RabbitMQDispatcherConfiguration {
 
-    @Bean
-    public TopicExchange customerRegistryExchange(@Value("${combat.exchange}") final String exchangeName) {
-        return new TopicExchange(exchangeName);
-    }
 
     @Bean
     public RabbitTemplate rabbitTemplate(final ConnectionFactory connectionFactory) {
